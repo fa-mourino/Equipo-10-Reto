@@ -13,7 +13,7 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -200 < head.x < 190 and -200 < head.y < 190
+    return -150 < head.x < 150 and -180 < head.y < 160
 
 def move():
     "Move snake forward one segment."
