@@ -18,11 +18,11 @@ def inside(head):
 
 def move():
     "Move snake forward one segment."
-    head = snake[-1].copy()
+    head = snake[-3].copy()
     head.move(aim)
 
     if not inside(head) or head in snake:
-        square(head.x, head.y, 9, 'blue')
+        square(head.x, head.y, 29, 'blue')
         update()
         return
 
@@ -42,9 +42,9 @@ def move():
 
     square(food.x, food.y, 29, 'magenta')
     update()
-    ontimer(move, 100)
+    ontimer(move, 300)
 
-setup(420, 420, 370, 0)
+setup(500, 500, 450, 0)
 hideturtle()
 tracer(False)
 listen()
