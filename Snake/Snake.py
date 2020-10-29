@@ -3,8 +3,8 @@ from random import randrange
 from freegames import square, vector
 
 food = vector(0, 0)
-snake = [vector(30, 0)]
-aim = vector(0, -30)
+snake = [vector(10, 0)]
+aim = vector(0, -10)
 
 def change(x, y):
     "Change snake direction."
@@ -13,7 +13,7 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -150 < head.x < 150 and -180 < head.y < 160
+    return -200 < head.x < 190 and -200 < head.y < 190
 
 def move():
     "Move snake forward one segment."
@@ -29,27 +29,27 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-35, 35) * 10
-        food.y = randrange(-35, 35) * 10
+        food.x = randrange(-15, 15) * 10
+        food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
 
     clear()
 
     for body in snake:
-        square(body.x, body.y, 29, 'red')
+        square(body.x, body.y, 9, 'red')
 
-    square(food.x, food.y, 29, 'magenta')
+    square(food.x, food.y, 9, 'magenta')
     update()
     ontimer(move, 100)
 
-setup(420, 420, 370, 0)
+setup(420,420,370,0)
 hideturtle()
 tracer(False)
 listen()
-onkey(lambda: change(30, 0), 'Right')
-onkey(lambda: change(-30, 0), 'Left')
-onkey(lambda: change(0, 30), 'Up')
-onkey(lambda: change(0, -30), 'Down')
+onkey(lambda: change(10, 0), 'Right')
+onkey(lambda: change(-10, 0), 'Left')
+onkey(lambda: change(0, 10), 'Up')
+onkey(lambda: change(0, -10), 'Down')
 move()
 done()
