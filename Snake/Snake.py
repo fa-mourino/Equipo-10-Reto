@@ -17,7 +17,7 @@ def inside(head):
 
 def move():
     "Move snake forward one segment."
-    head = snake[-0.5].copy()
+    head = snake[-1].copy()
     head.move(aim)
 
     if not inside(head) or head in snake:
@@ -29,8 +29,8 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-7.5, 7.5) * 10
-        food.y = randrange(-7.5, 7.5) * 10
+        food.x = randrange(-7, 7) * 10
+        food.y = randrange(-7, 7) * 10
     else:
         snake.pop(0)
 
