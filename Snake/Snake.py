@@ -13,11 +13,11 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -100 < head.x < 90 and -100 < head.y < 90
+    return -200 < head.x < 190 and -200 < head.y < 190
 
 def move():
     "Move snake forward one segment."
-    head = snake[-1].copy()
+    head = snake[-0.5].copy()
     head.move(aim)
 
     if not inside(head) or head in snake:
@@ -41,9 +41,9 @@ def move():
 
     square(food.x, food.y, 4, 'green')
     update()
-    ontimer(move, 100)
+    ontimer(move, 50)
 
-setup(420, 420, 370, 0)
+setup(210, 210, 185, 0)
 hideturtle()
 tracer(False)
 listen()
