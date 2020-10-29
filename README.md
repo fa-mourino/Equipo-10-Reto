@@ -1,2 +1,2 @@
 # Equipo-10-Reto
-Games Developed: Paint, Snake and Parabolic Shot
+Games Developed: Paint, Snake and Cannon
