@@ -21,7 +21,7 @@ def square(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
+    #Modify the range
     for count in range(4):
         forward(end.x - start.x)
         left(90)
@@ -34,7 +34,7 @@ def circle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
+    #Modify the value of the range and degrees, divide in the circle in the number of sections wanted
     for count in range(3):
         forward(end.x - start.x)
         left(120)
@@ -47,7 +47,7 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
+    #Modify the value of the range and degrees
     for count in range(4):
         forward(end.x - start.x)
         left(90)
@@ -60,7 +60,7 @@ def triangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
+    #Modify the value of the range and degrees
     for count in range(3):
         forward(end.x - start.x)
         left(120)
@@ -88,13 +88,13 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
-"Colour for figures"
+#Modify the colours and represent it with the first letter of the each one
 onkey(lambda: color('cyan'), 'C')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('blue'), 'T')
 onkey(lambda: color('black'), 'B')
 onkey(lambda: color('green'), 'G')
-"Shape and leters for each figure"
+#Modify the shape and represent it with the fisrt letter of each one
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
