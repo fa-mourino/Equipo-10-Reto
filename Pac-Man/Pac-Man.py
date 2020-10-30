@@ -1,7 +1,14 @@
+#Simple test to learn how to use the "Pac-Man" method
+#Alejandro Morfin Sepulveda
+#Fatima Mourino Rosendo
+#Miguel Angel Flores Alvarez
+#30/10/20
+
 from random import choice
 from turtle import *
 from freegames import floor, vector
 
+#Modification in speed
 state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
@@ -35,7 +42,7 @@ tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
-
+# Change values to make path smaller
 def square(x, y):
     "Draw square using path at (x, y)."
     path.up()
@@ -69,7 +76,7 @@ def valid(point):
         return False
 
     return point.x % 20 == 0 or point.y % 20 == 0
-
+# Change in colours
 def world():
     "Draw world using path."
     bgcolor('black')
@@ -106,7 +113,7 @@ def move():
         x = (index % 20) * 20 - 200
         y = 180 - (index // 20) * 20
         square(x, y)
-
+#Change in colours
     up()
     goto(pacman.x + 10, pacman.y + 10)
     dot(20, 'green')
@@ -124,7 +131,7 @@ def move():
             plan = choice(options)
             course.x = plan.x
             course.y = plan.y
-
+#Change in colours
         up()
         goto(point.x + 10, point.y + 10)
         dot(20, 'magenta')
@@ -142,7 +149,7 @@ def change(x, y):
     if valid(pacman + vector(x, y)):
         aim.x = x
         aim.y = y
-
+#Change in colours and speed
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
