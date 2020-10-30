@@ -1,7 +1,13 @@
+#Simple test to learn how to use the "turtle.circle" method
+#Alejandro Morfin Sepulveda
+#Fatima Mourino Rosendo
+#Miguel Angel Flores Alvarez
+#30/10/20
+
 from turtle import *
 from random import randrange
 from freegames import square, vector
-
+"Defining where is situated all of the components"
 food = vector(0, 0)
 snake = [vector(5, 0)]
 aim = vector(0, -5)
@@ -47,6 +53,7 @@ setup(210, 210, 185, 0)
 hideturtle()
 tracer(False)
 listen()
+"Defining the directions of the snake"
 onkey(lambda: change(5, 0), 'Right')
 onkey(lambda: change(-5, 0), 'Left')
 onkey(lambda: change(0, 5), 'Up')
