@@ -1,11 +1,8 @@
-"""
-Simple test to learn how to use the "turtle.circle" method
-
-Alejandro Morfin Sepulveda
-Fatima Mouriño Rosendo
-Miguel Angel Flores Alvarez
-30/10/20
-"""
+#Simple test to learn how to use the "turtle.circle" method
+#Alejandro Morfin Sepulveda
+#Fatima Mouriño Rosendo
+#Miguel Angel Flores Alvarez
+#30/10/20
 
 #Complete
 from turtle import *
