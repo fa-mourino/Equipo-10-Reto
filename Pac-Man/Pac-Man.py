@@ -109,7 +109,7 @@ def move():
 
     up()
     goto(pacman.x + 10, pacman.y + 10)
-    dot(20, 'blue')
+    dot(20, 'green')
 
     for point, course in ghosts:
         if valid(point + course):
