@@ -1,6 +1,6 @@
 #Simple test to learn how to use the "turtle.circle" method
 #Alejandro Morfin Sepulveda
-#Fatima Mouriño Rosendo
+#Fatima Mourino Rosendo
 #Miguel Angel Flores Alvarez
 #30/10/20
 
