@@ -1,3 +1,12 @@
+"""
+Simple test to learn how to use the "turtle.circle" method
+
+Alejandro Morfin Sepulveda
+Fatima Mouriño Rosendo
+Miguel Angel Flores Alvarez
+30/10/20
+"""
+
 #Complete
 from turtle import *
 from freegames import vector
@@ -82,19 +91,13 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
-
+"Colour for figures"
 onkey(lambda: color('cyan'), 'K')
 onkey(lambda: color('red'), 'W')
 onkey(lambda: color('blue'), 'G')
 onkey(lambda: color('black'), 'B')
 onkey(lambda: color('green'), 'R')
-
-onkey(lambda: color('yellow'), 'K')
-onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
-onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('red'), 'R')
-
+"Shape and leters for each figure"
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
